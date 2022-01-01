@@ -1,0 +1,52 @@
+#palco_jogo {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.palco_jogo--jogador, .palco_jogo--tabuleiro {
+    display: inline-block;
+}
+
+.palco_jogo--casa {
+    width: 100px;
+    height: 100px;
+}
+
+.palco_jogo--casa01 {
+    border-bottom: 1px solid red;
+    border-right: 1px solid red;
+
+}
+.palco_jogo--casa02 {
+    border-bottom: 1px solid red;
+    
+}
+.palco_jogo--casa03 {
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+
+}
+.palco_jogo--casa04 {
+    border-bottom: 1px solid red;
+    border-right: 1px solid red;
+
+}
+.palco_jogo--casa05 {
+    border-bottom: 1px solid red;
+    
+}
+.palco_jogo--casa06 {
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+
+}
+
+.palco_jogo--casa07{
+    
+    border-right: 1px solid red;
+
+}
+.palco_jogo--casa09 {
+    border-left: 1px solid red;
+    
+}

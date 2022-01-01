@@ -5,6 +5,8 @@
 
 		<title>Jogo da velha</title>
 		<script src="jquery-2.2.1.js"></script>
+		<script src="./js/jogo.js"></script>
+		<link rel="stylesheet" href="./css/index.css">
 	</head>
 
 	<body>
@@ -16,15 +18,15 @@
 					</tr>
 					<tr>
 						<td  align="center">
-							<img src="./imagens/jogador_1.png" alt="">
+							<img src="./imagens/jogador_1.png" alt="Jogador 1">
 							<br>
 							<input type="text" maxlength="10" placeholder="Jogador 1" style="border: 0;">
 						</td>
 						<td  align="center">
-							<img src="./imagens/iniciar.png" alt="">
+							<img src="./imagens/iniciar.png" alt="botão iniciar">
 						</td>
 						<td  align="center">
-							<img src="./imagens/jogador_2.png" alt="">
+							<img src="./imagens/jogador_2.png" alt="Jogador 2">
 							<br>
 							<input type="text" maxlength="10" placeholder="Jogador 2" style="border: 0;">
 						</td>
@@ -33,7 +35,58 @@
 				
 			</table>
 		</div>
-		<div id="palco_jogo"></div>
+		<div id="palco_jogo">
+			<div class="palco_jogo--jogador">
+				<img src="./imagens/jogador_1.png" alt="Jogador 1">
+			</div>
+			<div class="palco_jogo--tabuleiro">
+				<!-- PALCO DO JOGO -->
+				<table border="0">
+					<tbody>
+						<tr>
+							<td class="palco_jogo--casa01">
+								<div class="palco_jogo--casa"></div>
+							</td>
+							<td class="palco_jogo--casa02">
+								<div class="palco_jogo--casa"></div>
+							</td>
+							<td class="palco_jogo--casa03">
+								<div class="palco_jogo--casa"></div>
+							</td>
+						</tr>
+						<tr>
+							<td class="palco_jogo--casa04">
+								<div class="palco_jogo--casa"></div>
+							</td>
+							<td class="palco_jogo--casa05">
+								<div class="palco_jogo--casa"></div>
+							</td>
+							<td class="palco_jogo--casa06">
+								<div class="palco_jogo--casa"></div>
+							</td>
+						</tr>
+						<tr>
+							<td class="palco_jogo--casa07">
+								<div class="palco_jogo--casa"></div>
+							</td>
+							<td class="palco_jogo--casa08">
+								<div class="palco_jogo--casa"></div>
+							</td>
+							<td class="palco_jogo--casa09">
+								<div class="palco_jogo--casa"></div>
+							</td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+			<div  class="palco_jogo--jogador">
+				<img src="./imagens/jogador_2.png" alt="Jogador 2">
+			</div>
+
+
+
+		</div>
 
 	</body>
 </html>
