@@ -1,3 +1,7 @@
+let rodada = 1;
+const matriz_jogo = [];
+
+
 $(document).ready(function(){
     
     //INÍCIO FUNÇÃO CLICK INICIAR JOGO
@@ -35,8 +39,33 @@ $(document).ready(function(){
     $(".palco_jogo--casa").click(function(){
        
         let id_campo_clicado = this.id;
-        alert(id_campo_clicado);
+        jogada(id_campo_clicado);
     });
+
+    function jogada(id){
+        let icone = "";
+        let ponto = 0;
+
+        //QUANDO O RESTO DA DIVISÃO FOR 1 É A VEZ DO JOGADOR 1 SE 0 É A VEZ DO JOGADOR 2
+
+        if ((rodada % 2) == 1){
+            alert("É a vez do jogador 1");
+            icone = 'url("./imagens/marcacao_1.png")';
+            ponto = -1;
+
+        }else{
+            alert("É a vez do jogador 2");
+            icone = 'url("./imagens/marcacao_2.png")';
+            ponto = 1;
+
+        }
+
+        rodada ++;
+
+        //EXIBE A IMAGEM DENTRO DA DIV COM O ID RECUPERADO
+        $('#' + id).css('background',icone);
+
+    }
 
 
 });
