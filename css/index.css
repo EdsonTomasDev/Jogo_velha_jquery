@@ -50,3 +50,7 @@
     border-left: 1px solid red;
     
 }
+
+#palco_jogo {
+    display: none;
+}

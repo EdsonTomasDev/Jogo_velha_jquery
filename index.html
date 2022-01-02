@@ -20,15 +20,15 @@
 						<td  align="center">
 							<img src="./imagens/jogador_1.png" alt="Jogador 1">
 							<br>
-							<input type="text" maxlength="10" placeholder="Jogador 1" style="border: 0;">
+							<input id="apelido_jogador1" type="text" maxlength="10" placeholder="Jogador 1" style="border: 0;">
 						</td>
 						<td  align="center">
-							<img src="./imagens/iniciar.png" alt="botão iniciar">
+							<img id="btn_iniciar_jogo" src="./imagens/iniciar.png" alt="botão iniciar">
 						</td>
 						<td  align="center">
 							<img src="./imagens/jogador_2.png" alt="Jogador 2">
 							<br>
-							<input type="text" maxlength="10" placeholder="Jogador 2" style="border: 0;">
+							<input id="apelido_jogador2" type="text" maxlength="10" placeholder="Jogador 2" style="border: 0;">
 						</td>
 					</tr>
 				</tbody>
@@ -38,6 +38,8 @@
 		<div id="palco_jogo">
 			<div class="palco_jogo--jogador">
 				<img src="./imagens/jogador_1.png" alt="Jogador 1">
+				<br>
+				<span id="nome_jogador1">jogador 1</span>
 			</div>
 			<div class="palco_jogo--tabuleiro">
 				<!-- PALCO DO JOGO -->
@@ -82,6 +84,8 @@
 			</div>
 			<div  class="palco_jogo--jogador">
 				<img src="./imagens/jogador_2.png" alt="Jogador 2">
+				<br>
+				<span id="nome_jogador2">jogador 2</span>
 			</div>
 
 
