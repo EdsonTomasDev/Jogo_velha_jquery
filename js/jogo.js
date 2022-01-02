@@ -32,8 +32,10 @@ $(document).ready(function(){
     //FIM FUNÇÃO CLICK INICIAR JOGO
 
     //INÍCIO FUNÇÃO CLICK NOS CAMPOS JOGO DA VELHA
-    $("#palco_jogo--casa").click(function(){
-        alert("Jogada clicada!");
+    $(".palco_jogo--casa").click(function(){
+       
+        let id_campo_clicado = this.id;
+        alert(id_campo_clicado);
     });
 
 
