@@ -1,5 +1,19 @@
 let rodada = 1;
 const matriz_jogo = [];
+matriz_jogo['a'] = [];
+matriz_jogo['b'] = [];
+matriz_jogo['c'] = [];
+matriz_jogo['a'][1] = 0;
+matriz_jogo['a'][2] = 0;
+matriz_jogo['a'][3] = 0;
+
+matriz_jogo['b'][1] = 0;
+matriz_jogo['b'][2] = 0;
+matriz_jogo['b'][3] = 0;
+
+matriz_jogo['c'][1] = 0;
+matriz_jogo['c'][2] = 0;
+matriz_jogo['c'][3] = 0;
 
 
 $(document).ready(function(){
@@ -40,6 +54,8 @@ $(document).ready(function(){
        
         let id_campo_clicado = this.id;
         jogada(id_campo_clicado);
+
+       
     });
 
     function jogada(id){
@@ -49,12 +65,12 @@ $(document).ready(function(){
         //QUANDO O RESTO DA DIVISÃO FOR 1 É A VEZ DO JOGADOR 1 SE 0 É A VEZ DO JOGADOR 2
 
         if ((rodada % 2) == 1){
-            alert("É a vez do jogador 1");
+            //alert("É a vez do jogador 1");
             icone = 'url("./imagens/marcacao_1.png")';
             ponto = -1;
 
         }else{
-            alert("É a vez do jogador 2");
+            //alert("É a vez do jogador 2");
             icone = 'url("./imagens/marcacao_2.png")';
             ponto = 1;
 
@@ -64,6 +80,15 @@ $(document).ready(function(){
 
         //EXIBE A IMAGEM DENTRO DA DIV COM O ID RECUPERADO
         $('#' + id).css('background',icone);
+
+         //SEPARAR O ID LETRA E NÚMERO
+         const lista_id = id.split("");
+         let linha = lista_id[0];
+         let coluna = lista_id[1];
+         //ATRIBUI VALOR PARA O ARRAY COM A LETRA CORRESPONDENTE
+         matriz_jogo[linha][coluna] = ponto;
+         alert(matriz_jogo['a'][1]);
+      
 
     }
 
