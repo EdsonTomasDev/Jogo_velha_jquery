@@ -87,9 +87,38 @@ $(document).ready(function(){
          let coluna = lista_id[1];
          //ATRIBUI VALOR PARA O ARRAY COM A LETRA CORRESPONDENTE
          matriz_jogo[linha][coluna] = ponto;
-         alert(matriz_jogo['a'][1]);
+        //  alert(matriz_jogo[linha][coluna]);
+
+         verifica_combinacao()
       
 
+    }
+    //VERIFICA SE A COMBINAÇÃO GANHA O JOGO
+    // SE DER -3 O JOGADOR 1 VENCE
+    // SE DER 3 O JOGADOR 2 VENCE
+    function verifica_combinacao(){
+
+        let pontos = 0;
+
+        //VERIFICA NA HORIZONTAL
+        for(let i = 1; i <= 3; i++){
+            pontos = pontos + matriz_jogo['a'][i];
+            
+        }
+        ganhador(pontos);
+
+        
+    }
+
+    function ganhador(pontos){
+
+        if (pontos == -3){
+            alert("O jogador 1 venceu!")
+        }
+
+        if (pontos == 3){
+            alert("O jogador 2 venceu!")
+        }
     }
 
 
