@@ -53,6 +53,8 @@ $(document).ready(function(){
     $(".palco_jogo--casa").click(function(){
        
         let id_campo_clicado = this.id;
+        //NÃO PERMITIR OUTRO CLIQUE NA MESMA CASA
+        $("#" + id_campo_clicado).off();
         jogada(id_campo_clicado);
 
        
