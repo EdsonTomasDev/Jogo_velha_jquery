@@ -105,7 +105,52 @@ $(document).ready(function(){
             pontos = pontos + matriz_jogo['a'][i];
             
         }
+
         ganhador(pontos);
+
+        pontos = 0;
+
+        for(let i = 1; i <= 3; i++){
+            pontos = pontos + matriz_jogo['b'][i];
+            
+        }
+
+        ganhador(pontos);
+
+        pontos = 0;
+
+        for(let i = 1; i <= 3; i++){
+            pontos = pontos + matriz_jogo['c'][i];
+            
+        }
+
+        ganhador(pontos);
+
+        //VERIFICA NA VERTICAL
+           
+        for(let l = 1; l <= 3; l++){
+            pontos = 0;
+            pontos = pontos +  matriz_jogo['a'][l];
+            pontos = pontos +  matriz_jogo['b'][l];
+            pontos = pontos +  matriz_jogo['c'][l];
+
+            ganhador(pontos);
+
+        }
+
+        //VERIFICA NA DIAGONAL
+        pontos = 0;
+
+        pontos = pontos + matriz_jogo['a'][1] + matriz_jogo['b'][2] + matriz_jogo['c'][3];
+
+        ganhador(pontos);
+
+        pontos = 0;
+
+        pontos = pontos + matriz_jogo['a'][3] + matriz_jogo['b'][2] + matriz_jogo['c'][1];
+
+        ganhador(pontos);
+      
 
         
     }
@@ -113,11 +158,15 @@ $(document).ready(function(){
     function ganhador(pontos){
 
         if (pontos == -3){
-            alert("O jogador 1 venceu!")
+            let jogadores = $("#apelido_jogador1").val();
+            alert("O jogador " + jogadores + " venceu!");
+            $(".palco_jogo--casa").off();
         }
 
         if (pontos == 3){
-            alert("O jogador 2 venceu!")
+            let jogadores = $("#apelido_jogador2").val();
+            alert("O jogador " + jogadores + " venceu!");
+            $(".palco_jogo--casa").off();
         }
     }
 
